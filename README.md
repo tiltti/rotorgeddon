@@ -17,8 +17,8 @@ Share your PIDs here. Comment on the results and purpose: racing, aerial photogr
 
 
 **ET150**: Eachine ET 150 
-- [dump](et150_cf_dump.txt): Cleanflight
-- [config](et150_cf_config.txt): Cleanflight
+- [dump](et150/cleanflight/dump.txt): Cleanflight
+- [config](et150/cleanflight/config.txt): Cleanflight
 
 
 A good source for many multicopter and drone related stuff:
