@@ -1,5 +1,6 @@
+
 # version
-# BetaFlight/NAZE 2.8.0 May 30 2016 / 19:53:05 (3470181)
+# BetaFlight/NAZE 2.8.1 Jun  8 2016 / 13:17:47 (c0b00fd)
 # dump master
 
 # mixer
@@ -32,7 +33,7 @@ feature -BLACKBOX
 feature -CHANNEL_FORWARDING
 feature -TRANSPONDER
 feature -AIRMODE
-feature -SUPEREXPO
+feature -SUPEREXPO_RATES
 feature VBAT
 feature RX_SERIAL
 feature SOFTSERIAL
@@ -40,7 +41,7 @@ feature FAILSAFE
 feature TELEMETRY
 feature ONESHOT125
 feature AIRMODE
-feature SUPEREXPO
+feature SUPEREXPO_RATES
 
 
 # beeper
@@ -61,7 +62,7 @@ beeper MULTI_BEEPS
 beeper DISARM_REPEAT
 beeper ARMED
 beeper SYSTEM_INIT
-beeper ON_USB
+beeper -ON_USB
 
 
 # map
@@ -190,7 +191,6 @@ set rssi_channel = 0
 set rssi_scale = 30
 set rssi_ppm_invert = OFF
 set input_filtering_mode = OFF
-set rc_smoothing = OFF
 set roll_yaw_cam_mix_degrees = 0
 set max_aux_channels = 6
 set debug_mode = NONE
@@ -261,9 +261,6 @@ set yaw_motor_direction = 1
 set tri_unarmed_servo = ON
 set servo_lowpass_freq = 400
 set servo_lowpass_enable = OFF
-set super_expo_factor = 30
-set super_expo_factor_yaw = 40
-set super_expo_yaw = ON
 set airmode_activate_throttle = 1350
 set failsafe_delay = 10
 set failsafe_off_delay = 10
@@ -288,7 +285,7 @@ set baro_cf_alt =  0.965
 set baro_hardware = AUTO
 set mag_hardware = AUTO
 set mag_declination = 0
-set pid_process_denom = 1
+set pid_process_denom = 2
 set blackbox_rate_num = 0
 set blackbox_rate_denom = 0
 set blackbox_device = SERIAL
@@ -322,18 +319,18 @@ profile 0
 ############################# PROFILE VALUES ####################################
 
 set yaw_p_limit = 500
-set dterm_lowpass = 110
-set dynamic_pid = ON
+set dterm_lowpass = 50
+set dynamic_iterm = ON
 set iterm_ignore_threshold = 200
-set yaw_iterm_ignore_threshold = 45
+set yaw_iterm_ignore_threshold = 35
 set yaw_lowpass = 80
-set pid_controller = LUX
-set p_pitch = 45
+set pid_controller = MWREWRITE
+set p_pitch = 50
 set i_pitch = 40
-set d_pitch = 15
+set d_pitch = 18
 set p_roll = 45
 set i_roll = 40
-set d_roll = 15
+set d_roll = 18
 set p_yaw = 90
 set i_yaw = 45
 set d_yaw = 20
@@ -346,19 +343,20 @@ set d_level = 100
 set p_vel = 55
 set i_vel = 55
 set d_vel = 75
-rateprofile 2
+rateprofile 0
 
 # rateprofile
 rateprofile 0
 
 set rc_rate = 100
-set rc_expo = 70
-set rc_yaw_expo = 20
+set rc_rate_yaw = 100
+set rc_expo = 10
+set rc_yaw_expo = 10
 set thr_mid = 50
 set thr_expo = 0
-set roll_rate = 50
-set pitch_rate = 50
-set yaw_rate = 50
+set roll_rate = 70
+set pitch_rate = 70
+set yaw_rate = 70
 set tpa_rate = 20
 set tpa_breakpoint = 1650
 
@@ -366,13 +364,14 @@ set tpa_breakpoint = 1650
 rateprofile 1
 
 set rc_rate = 100
-set rc_expo = 70
-set rc_yaw_expo = 20
+set rc_rate_yaw = 100
+set rc_expo = 10
+set rc_yaw_expo = 10
 set thr_mid = 50
 set thr_expo = 0
-set roll_rate = 50
-set pitch_rate = 50
-set yaw_rate = 50
+set roll_rate = 70
+set pitch_rate = 70
+set yaw_rate = 70
 set tpa_rate = 20
 set tpa_breakpoint = 1650
 
@@ -380,33 +379,37 @@ set tpa_breakpoint = 1650
 rateprofile 2
 
 set rc_rate = 100
-set rc_expo = 70
-set rc_yaw_expo = 20
+set rc_rate_yaw = 100
+set rc_expo = 10
+set rc_yaw_expo = 10
 set thr_mid = 50
 set thr_expo = 0
-set roll_rate = 50
-set pitch_rate = 50
-set yaw_rate = 50
+set roll_rate = 70
+set pitch_rate = 70
+set yaw_rate = 70
 set tpa_rate = 20
 set tpa_breakpoint = 1650
+
+# restore original rateprofile selection
+rateprofile 0
 
 # profile
 profile 1
 ############################# PROFILE VALUES ####################################
 
 set yaw_p_limit = 500
-set dterm_lowpass = 110
-set dynamic_pid = ON
+set dterm_lowpass = 50
+set dynamic_iterm = ON
 set iterm_ignore_threshold = 200
-set yaw_iterm_ignore_threshold = 45
+set yaw_iterm_ignore_threshold = 35
 set yaw_lowpass = 80
 set pid_controller = MWREWRITE
-set p_pitch = 45
+set p_pitch = 50
 set i_pitch = 40
-set d_pitch = 15
+set d_pitch = 18
 set p_roll = 45
 set i_roll = 40
-set d_roll = 15
+set d_roll = 18
 set p_yaw = 90
 set i_yaw = 45
 set d_yaw = 20
@@ -419,19 +422,20 @@ set d_level = 100
 set p_vel = 55
 set i_vel = 55
 set d_vel = 75
-rateprofile 2
+rateprofile 0
 
 # rateprofile
 rateprofile 0
 
 set rc_rate = 100
-set rc_expo = 70
-set rc_yaw_expo = 20
+set rc_rate_yaw = 100
+set rc_expo = 10
+set rc_yaw_expo = 10
 set thr_mid = 50
 set thr_expo = 0
-set roll_rate = 50
-set pitch_rate = 50
-set yaw_rate = 50
+set roll_rate = 70
+set pitch_rate = 70
+set yaw_rate = 70
 set tpa_rate = 20
 set tpa_breakpoint = 1650
 
@@ -439,13 +443,14 @@ set tpa_breakpoint = 1650
 rateprofile 1
 
 set rc_rate = 100
-set rc_expo = 70
-set rc_yaw_expo = 20
+set rc_rate_yaw = 100
+set rc_expo = 10
+set rc_yaw_expo = 10
 set thr_mid = 50
 set thr_expo = 0
-set roll_rate = 50
-set pitch_rate = 50
-set yaw_rate = 50
+set roll_rate = 70
+set pitch_rate = 70
+set yaw_rate = 70
 set tpa_rate = 20
 set tpa_breakpoint = 1650
 
@@ -453,22 +458,19 @@ set tpa_breakpoint = 1650
 rateprofile 2
 
 set rc_rate = 100
-set rc_expo = 70
-set rc_yaw_expo = 20
+set rc_rate_yaw = 100
+set rc_expo = 10
+set rc_yaw_expo = 10
 set thr_mid = 50
 set thr_expo = 0
-set roll_rate = 50
-set pitch_rate = 50
-set yaw_rate = 50
+set roll_rate = 70
+set pitch_rate = 70
+set yaw_rate = 70
 set tpa_rate = 20
 set tpa_breakpoint = 1650
 
-# restore original profile / rateprofile selection
+# restore original rateprofile selection
+rateprofile 0
+
+# restore original profile selection
 profile 0
-
-rateprofile 2
-
-# save configuration
-save
-
-# 
