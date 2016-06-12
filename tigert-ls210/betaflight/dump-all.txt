@@ -131,8 +131,8 @@ color 15 0,0,0
 
 # aux
 aux 0 0 1 1300 2100
-aux 1 1 0 1300 2100
-aux 2 0 0 900 900
+aux 1 1 9 1300 2100
+aux 2 12 0 1300 2100
 aux 3 0 0 900 900
 aux 4 0 0 900 900
 aux 5 0 0 900 900
@@ -299,7 +299,7 @@ rxfail 0 a
 rxfail 1 a
 rxfail 2 a
 rxfail 3 a
-rxfail 4 h
+rxfail 4 s 2000
 rxfail 5 h
 rxfail 6 h
 rxfail 7 h
@@ -308,7 +308,7 @@ rxfail 9 h
 rxfail 10 h
 rxfail 11 h
 rxfail 12 h
-rxfail 13 h
+rxfail 13 s 2000
 rxfail 14 h
 rxfail 15 h
 rxfail 16 h
