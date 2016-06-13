@@ -132,7 +132,7 @@ color 15 0,0,0
 
 # aux
 aux 0 0 1 1300 2100
-aux 1 2 5 1800 2100
+aux 1 1 5 1800 2100
 aux 2 12 0 1300 2100
 aux 3 25 1 1300 2100
 aux 4 0 0 900 900
@@ -274,7 +274,7 @@ set servo_lowpass_enable = OFF
 set airmode_activate_throttle = 1350
 set failsafe_delay = 10
 set failsafe_off_delay = 10
-set failsafe_throttle = 1150
+set failsafe_throttle = 1200
 set failsafe_kill_switch = OFF
 set failsafe_throttle_low_delay = 100
 set failsafe_procedure = OFF
