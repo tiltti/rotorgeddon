@@ -131,7 +131,7 @@ color 15 0,0,0
 
 # aux
 aux 0 0 1 1300 2100
-aux 1 2 5 1700 2100
+aux 1 1 5 1800 2100
 aux 2 12 0 1300 2100
 aux 3 0 0 900 900
 aux 4 0 0 900 900
@@ -264,7 +264,7 @@ set servo_lowpass_enable = OFF
 set airmode_activate_throttle = 1350
 set failsafe_delay = 10
 set failsafe_off_delay = 10
-set failsafe_throttle = 1100
+set failsafe_throttle = 1220
 set failsafe_kill_switch = OFF
 set failsafe_throttle_low_delay = 100
 set failsafe_procedure = OFF
@@ -285,7 +285,7 @@ set baro_cf_alt =  0.965
 set baro_hardware = AUTO
 set mag_hardware = AUTO
 set mag_declination = 0
-set pid_process_denom = 2
+set pid_process_denom = 1
 set blackbox_rate_num = 0
 set blackbox_rate_denom = 0
 set blackbox_device = SERIAL
@@ -304,7 +304,7 @@ rxfail 5 h
 rxfail 6 h
 rxfail 7 h
 rxfail 8 h
-rxfail 9 h
+rxfail 9 s 2000
 rxfail 10 h
 rxfail 11 h
 rxfail 12 h
@@ -474,4 +474,3 @@ rateprofile 0
 
 # restore original profile selection
 profile 0
-
