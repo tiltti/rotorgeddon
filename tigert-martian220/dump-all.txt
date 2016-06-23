@@ -40,6 +40,7 @@ feature SOFTSERIAL
 feature FAILSAFE
 feature TELEMETRY
 feature ONESHOT125
+feature AIRMODE
 feature SUPEREXPO_RATES
 
 
@@ -129,9 +130,9 @@ color 14 0,0,0
 color 15 0,0,0
 
 # aux
-aux 0 0 0 900 900
-aux 1 0 0 900 900
-aux 2 0 0 900 900
+aux 0 0 1 1300 2100
+aux 1 12 0 1700 2100
+aux 2 26 0 1700 2100
 aux 3 0 0 900 900
 aux 4 0 0 900 900
 aux 5 0 0 900 900
@@ -193,7 +194,7 @@ set input_filtering_mode = OFF
 set roll_yaw_cam_mix_degrees = 0
 set max_aux_channels = 6
 set debug_mode = NONE
-set min_throttle = 1050
+set min_throttle = 1042
 set max_throttle = 2000
 set min_command = 1000
 set anti_desync_power_step = 0
@@ -202,7 +203,7 @@ set 3d_deadband_low = 1406
 set 3d_deadband_high = 1514
 set 3d_neutral = 1460
 set 3d_deadband_throttle = 50
-set unsynced_fast_pwm = OFF
+set unsynced_fast_pwm = ON
 set fast_pwm_protocol = ONESHOT125
 set motor_pwm_rate = 400
 set servo_pwm_rate = 50
@@ -473,7 +474,3 @@ rateprofile 0
 
 # restore original profile selection
 profile 0
-
-
-# save configuration
-save
