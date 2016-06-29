@@ -1,6 +1,6 @@
 
 # version
-# BetaFlight/NAZE 2.8.1 Jun 19 2016 / 20:31:03 (0c5ea0f)
+# BetaFlight/NAZE 2.9.0 Jun 25 2016 / 23:43:09 (3d9b180)
 # dump master
 
 # mixer
@@ -62,7 +62,7 @@ beeper MULTI_BEEPS
 beeper DISARM_REPEAT
 beeper ARMED
 beeper SYSTEM_INIT
-beeper ON_USB
+beeper -ON_USB
 
 
 # map
@@ -189,6 +189,7 @@ set min_check = 1100
 set max_check = 1900
 set rssi_channel = 0
 set rssi_scale = 30
+set rc_smooth_interval_ms = 0
 set rssi_ppm_invert = OFF
 set input_filtering_mode = OFF
 set roll_yaw_cam_mix_degrees = 0
@@ -203,7 +204,7 @@ set 3d_deadband_low = 1406
 set 3d_deadband_high = 1514
 set 3d_neutral = 1460
 set 3d_deadband_throttle = 50
-set unsynced_fast_pwm = ON
+set unsynced_fast_pwm = OFF
 set fast_pwm_protocol = ONESHOT125
 set motor_pwm_rate = 400
 set servo_pwm_rate = 50
@@ -271,7 +272,7 @@ set failsafe_procedure = OFF
 set rx_min_usec = 885
 set rx_max_usec = 2115
 set gimbal_mode = NORMAL
-set acc_hardware = NONE
+set acc_hardware = AUTO
 set acc_lpf_hz =  10.000
 set accxy_deadband = 40
 set accz_deadband = 40
@@ -282,8 +283,8 @@ set baro_tab_size = 21
 set baro_noise_lpf =  0.600
 set baro_cf_vel =  0.985
 set baro_cf_alt =  0.965
-set baro_hardware = NONE
-set mag_hardware = NONE
+set baro_hardware = AUTO
+set mag_hardware = AUTO
 set mag_declination = 0
 set pid_process_denom = 2
 set blackbox_rate_num = 0
@@ -318,20 +319,21 @@ rxfail 17 h
 profile 0
 ############################# PROFILE VALUES ####################################
 
+set pid_delta_method = MEASUREMENT
 set yaw_p_limit = 500
-set dterm_lowpass = 50
+set dterm_lowpass = 100
 set dynamic_iterm = ON
-set iterm_ignore_threshold = 200
+set iterm_ignore_threshold = 180
 set yaw_iterm_ignore_threshold = 35
 set yaw_lowpass = 80
-set pid_controller = MWREWRITE
+set pid_controller = INT
 set p_pitch = 50
 set i_pitch = 40
 set d_pitch = 18
 set p_roll = 45
 set i_roll = 40
 set d_roll = 18
-set p_yaw = 90
+set p_yaw = 80
 set i_yaw = 45
 set d_yaw = 20
 set p_alt = 50
@@ -397,20 +399,21 @@ rateprofile 0
 profile 1
 ############################# PROFILE VALUES ####################################
 
+set pid_delta_method = MEASUREMENT
 set yaw_p_limit = 500
-set dterm_lowpass = 50
+set dterm_lowpass = 100
 set dynamic_iterm = ON
-set iterm_ignore_threshold = 200
+set iterm_ignore_threshold = 180
 set yaw_iterm_ignore_threshold = 35
 set yaw_lowpass = 80
-set pid_controller = MWREWRITE
+set pid_controller = INT
 set p_pitch = 50
 set i_pitch = 40
 set d_pitch = 18
 set p_roll = 45
 set i_roll = 40
 set d_roll = 18
-set p_yaw = 90
+set p_yaw = 80
 set i_yaw = 45
 set d_yaw = 20
 set p_alt = 50
