@@ -1,0 +1,60 @@
+# diff
+
+# version
+# BetaFlight/NAZE 3.0.0 Aug  9 2016 / 23:47:04 (ea67304)
+
+# name
+name Kermit
+
+# mixer
+
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature SOFTSERIAL
+feature TELEMETRY
+feature BLACKBOX
+feature AIRMODE
+
+# beeper
+
+# map
+map TAER1234
+
+# serial
+serial 1 64 115200 57600 0 115200
+serial 30 32 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 1 1300 2100
+
+# adjrange
+
+# rxrange
+
+# servo
+
+# rxfail
+
+# master
+set 3d_deadband_throttle = 53252
+set serialrx_provider = SBUS
+set telemetry_inversion = ON
+set failsafe_procedure = ON
+set acc_hardware = NONE
+set baro_hardware = NONE
+set mag_hardware = NONE
+set blackbox_device = SPIFLASH
+
+# profile
+profile 0
+
+# rateprofile
+rateprofile 0
+
