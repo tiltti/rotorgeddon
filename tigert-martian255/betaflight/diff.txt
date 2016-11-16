@@ -1,0 +1,127 @@
+# version
+# BetaFlight/SPRACINGF3EVO 3.0.1 Oct 18 2016 / 10:36:44 (48b7b4f)
+
+# reset configuration to default settings
+defaults
+
+# name
+name Martian255
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature -RX_PPM
+feature -CURRENT_METER
+feature -RSSI_ADC
+feature -TRANSPONDER
+feature RX_SERIAL
+feature LED_STRIP
+feature AIRMODE
+
+# beeper
+beeper -ON_USB
+
+# map
+map TAER1234
+
+# serial
+serial 0 0 115200 57600 0 115200
+serial 1 64 115200 57600 0 115200
+serial 2 32 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 1 1300 2100
+aux 1 1 5 1800 2100
+aux 2 12 5 1300 2100
+aux 3 29 0 1300 2100
+
+# adjrange
+
+# rxrange
+
+# rxfail
+
+# master
+set roll_yaw_cam_mix_degrees = 24
+set serialrx_provider = SBUS
+set align_board_yaw = 270
+set failsafe_throttle = 1250
+set failsafe_procedure = AUTO-LAND
+set baro_cf_vel =  0.985
+set pid_process_denom = 2
+set blackbox_on_motor_test = ON
+
+# profile
+profile 0
+
+rateprofile 0
+
+# rateprofile
+rateprofile 0
+
+
+# rateprofile
+rateprofile 1
+
+
+# rateprofile
+rateprofile 2
+
+
+# restore original rateprofile selection
+rateprofile 0
+
+# profile
+profile 1
+
+rateprofile 0
+
+# rateprofile
+rateprofile 0
+
+
+# rateprofile
+rateprofile 1
+
+
+# rateprofile
+rateprofile 2
+
+
+# restore original rateprofile selection
+rateprofile 0
+
+# profile
+profile 2
+
+rateprofile 0
+
+# rateprofile
+rateprofile 0
+
+
+# rateprofile
+rateprofile 1
+
+
+# rateprofile
+rateprofile 2
+
+
+# restore original rateprofile selection
+rateprofile 0
+
+# restore original profile selection
+profile 0
+
