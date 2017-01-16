@@ -1,11 +1,11 @@
-# version
-# BetaFlight/SPRACINGF3EVO 3.0.1 Oct 18 2016 / 10:36:44 (48b7b4f)
 
-# reset configuration to default settings
-defaults
+# version
+# Betaflight / SPRACINGF3EVO 3.1.0 Jan 14 2017 / 23:28:58 (f3d2b37)
 
 # name
 name Martian255
+
+# resources
 
 # mixer
 
@@ -30,7 +30,6 @@ beeper -ON_USB
 map TAER1234
 
 # serial
-serial 0 0 115200 57600 0 115200
 serial 1 64 115200 57600 0 115200
 serial 2 32 115200 57600 0 115200
 
@@ -54,12 +53,16 @@ aux 3 29 0 1300 2100
 
 # master
 set roll_yaw_cam_mix_degrees = 24
+set min_throttle = 1020
+set max_throttle = 1990
+set use_unsynced_pwm = ON
+set motor_pwm_rate = 2000
+set disarm_kill_switch = OFF
 set serialrx_provider = SBUS
 set align_board_yaw = 270
 set failsafe_throttle = 1250
 set failsafe_procedure = AUTO-LAND
 set baro_cf_vel =  0.985
-set pid_process_denom = 2
 set blackbox_on_motor_test = ON
 
 # profile
@@ -70,58 +73,4 @@ rateprofile 0
 # rateprofile
 rateprofile 0
 
-
-# rateprofile
-rateprofile 1
-
-
-# rateprofile
-rateprofile 2
-
-
-# restore original rateprofile selection
-rateprofile 0
-
-# profile
-profile 1
-
-rateprofile 0
-
-# rateprofile
-rateprofile 0
-
-
-# rateprofile
-rateprofile 1
-
-
-# rateprofile
-rateprofile 2
-
-
-# restore original rateprofile selection
-rateprofile 0
-
-# profile
-profile 2
-
-rateprofile 0
-
-# rateprofile
-rateprofile 0
-
-
-# rateprofile
-rateprofile 1
-
-
-# rateprofile
-rateprofile 2
-
-
-# restore original rateprofile selection
-rateprofile 0
-
-# restore original profile selection
-profile 0
 
