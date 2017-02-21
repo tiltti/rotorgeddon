@@ -1,8 +1,11 @@
 
-# diff
+# diff all
 
 # version
 # INAV/OMNIBUS 1.6.0 Feb  5 2017 / 11:31:45 (dcc163f)
+
+# reset configuration to default settings
+# defaults
 
 # resources
 
@@ -69,7 +72,14 @@ set max_throttle = 2000
 set motor_pwm_rate = 2000
 set motor_pwm_protocol = ONESHOT42
 set align_board_pitch = 50
+set osd_main_voltage_pos = 2507
+set osd_rssi_pos = 2497
+set osd_flytimer_pos = 2518
+set osd_ontime_pos = 374
+set osd_flymode_pos = 364
+set osd_artificial_horizon = 200
 set osd_gps_sats_pos = 1410
+set osd_altitude_pos = 2102
 
 # profile
 profile 0
@@ -82,4 +92,18 @@ set fw_i_roll = 30
 set fw_ff_roll = 15
 set roll_rate = 40
 set pitch_rate = 25
+
+# profile
+profile 1
+
+
+# profile
+profile 2
+
+
+# restore original profile selection
+profile 1
+
+# save configuration
+save
 
