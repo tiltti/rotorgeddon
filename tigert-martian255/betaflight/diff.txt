@@ -1,20 +1,6 @@
-
-# version
-# Betaflight / SPRACINGF3EVO 3.1.0 Jan 14 2017 / 23:28:58 (f3d2b37)
-
-# name
+# Betaflight / SPRACINGF3EVO 3.1.7 Apr  3 2017 / 22:28:08 (e1c4b5c)
 name Martian255
 
-# resources
-
-# mixer
-
-# servo
-
-# servo mix
-
-
-# feature
 feature -RX_PPM
 feature -CURRENT_METER
 feature -RSSI_ADC
@@ -22,40 +8,19 @@ feature -TRANSPONDER
 feature RX_SERIAL
 feature LED_STRIP
 feature AIRMODE
-
-# beeper
 beeper -ON_USB
-
-# map
 map TAER1234
-
-# serial
 serial 1 64 115200 57600 0 115200
 serial 2 32 115200 57600 0 115200
-
-# led
-
-# color
-
-# mode_color
-
-# aux
 aux 0 0 1 1300 2100
-aux 1 1 5 1800 2100
-aux 2 12 5 1300 2100
-aux 3 29 0 1300 2100
-
-# adjrange
-
-# rxrange
-
-# rxfail
-
-# master
-set roll_yaw_cam_mix_degrees = 24
+aux 1 4 1 1700 2100
+aux 2 1 5 1800 2100
+aux 3 13 5 1700 2100
+aux 4 30 2 1300 2100
+set fpv_mix_degrees = 32
 set min_throttle = 1020
 set max_throttle = 1990
-set use_unsynced_pwm = ON
+set motor_pwm_protocol = ONESHOT125
 set motor_pwm_rate = 2000
 set disarm_kill_switch = OFF
 set serialrx_provider = SBUS
@@ -64,13 +29,7 @@ set failsafe_throttle = 1250
 set failsafe_procedure = AUTO-LAND
 set baro_cf_vel =  0.985
 set blackbox_on_motor_test = ON
-
-# profile
 profile 0
-
-rateprofile 0
-
-# rateprofile
 rateprofile 0
 
 
