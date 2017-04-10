@@ -12,16 +12,27 @@ beeper -ON_USB
 map TAER1234
 serial 1 64 115200 57600 0 115200
 serial 2 32 115200 57600 0 115200
+led 0 2,10::CW:2
+led 1 3,9::AO:12
+led 2 4,8::AO:12
+led 3 5,7::AO:12
+led 4 10,7::AO:12
+led 5 11,8::AO:12
+led 6 12,9::AO:12
+led 7 13,10::CW:6
+mode_color 6 0 8
+mode_color 6 1 12
 aux 0 0 1 1300 2100
 aux 1 4 1 1700 2100
 aux 2 1 5 1800 2100
 aux 3 13 5 1700 2100
 aux 4 30 2 1300 2100
 set fpv_mix_degrees = 32
-set min_throttle = 1020
+set min_throttle = 1024
 set max_throttle = 1990
+set use_unsynced_pwm = OFF
 set motor_pwm_protocol = ONESHOT125
-set motor_pwm_rate = 2000
+set motor_pwm_rate = 800
 set disarm_kill_switch = OFF
 set serialrx_provider = SBUS
 set align_board_yaw = 270
@@ -30,6 +41,6 @@ set failsafe_procedure = AUTO-LAND
 set baro_cf_vel =  0.985
 set blackbox_on_motor_test = ON
 profile 0
+
 rateprofile 0
-
-
+rateprofile 0
