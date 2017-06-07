@@ -1,0 +1,93 @@
+
+# version
+# INAV/OMNIBUS 1.6.1 Mar  9 2017 / 00:43:35 (6c878ae)
+
+# resources
+
+# mixer
+mixer FLYING_WING
+
+# servo
+servo 3 1000 2000 1500 90 90 -100 -1
+
+# servo mix
+
+# feature
+feature -RX_PPM
+feature -BLACKBOX
+feature RX_SERIAL
+feature TELEMETRY
+feature LED_STRIP
+feature PWM_OUTPUT_ENABLE
+feature OSD
+
+# beeper
+
+# map
+map TAER1234
+
+# serial
+serial 0 64 115200 38400 0 115200
+serial 1 32 115200 38400 0 115200
+
+# led
+led 0 0,6::C:2
+led 1 0,7::CB:1
+led 2 6,7::CT:11
+led 3 7,7::CT:11
+led 4 9,7::CT:11
+led 5 10,7::CT:11
+led 6 15,7::CB:1
+led 7 15,6::C:7
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 1 1300 2100
+aux 1 1 1 1700 2100
+aux 2 20 1 900 2100
+aux 3 10 0 1700 2100
+aux 4 14 2 1700 2100
+aux 5 11 5 1700 2100
+
+# adjrange
+
+# rxrange
+
+# master
+set gyro_sync = ON
+set gyro_hardware_lpf = 188HZ
+set acc_hardware = MPU6000
+set acczero_x = 156
+set acczero_y = -19
+set acczero_z = -213
+set accgain_x = 4077
+set accgain_y = 4056
+set accgain_z = 4018
+set mag_hardware = NONE
+set baro_hardware = BMP280
+set rssi_channel = 9
+set serialrx_provider = SBUS
+set min_throttle = 1050
+set max_throttle = 2000
+set motor_pwm_rate = 2000
+set motor_pwm_protocol = MULTISHOT
+set align_board_roll = 4
+set align_board_yaw = -900
+set osd_main_voltage_pos = 3084
+set osd_gps_sats_pos = 3424
+
+# profile
+profile 1
+
+set fw_p_pitch = 8
+set fw_i_pitch = 18
+set fw_ff_pitch = 25
+set fw_p_roll = 8
+set fw_i_roll = 18
+set fw_ff_roll = 18
+set roll_rate = 60
+set pitch_rate = 50
+

@@ -1,0 +1,105 @@
+
+# version
+# BetaFlight/NAZE 3.0.0 Aug 21 2016 / 01:36:38 (a321f7f)
+
+# reset configuration to default settings
+defaults
+
+# name
+name LS210
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature SOFTSERIAL
+feature TELEMETRY
+feature AIRMODE
+
+# beeper
+beeper -ON_USB
+
+# map
+map TAER1234
+
+# serial
+serial 1 64 115200 57600 0 115200
+serial 30 32 115200 57600 9600 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 1 1300 2100
+aux 1 29 0 1300 2100
+
+# adjrange
+
+# rxrange
+
+# rxfail
+
+# master
+set roll_yaw_cam_mix_degrees = 24
+set max_aux_channels = 2
+set min_throttle = 1032
+set 3d_deadband_throttle = 1000
+set serialrx_provider = SBUS
+set telemetry_inversion = ON
+set frsky_vfas_precision = 1
+set align_board_yaw = -90
+set gyro_sync_denom = 5
+set acc_hardware = NONE
+set blackbox_device = SPIFLASH
+
+# profile
+profile 0
+
+rateprofile 0
+
+# rateprofile
+rateprofile 0
+
+
+# rateprofile
+rateprofile 1
+
+
+# rateprofile
+rateprofile 2
+
+
+# restore original rateprofile selection
+rateprofile 0
+
+# profile
+profile 1
+
+rateprofile 0
+
+# rateprofile
+rateprofile 0
+
+
+# rateprofile
+rateprofile 1
+
+
+# rateprofile
+rateprofile 2
+
+
+# restore original rateprofile selection
+rateprofile 0
+
+# restore original profile selection
+profile 0
